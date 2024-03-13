@@ -1,16 +1,60 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import math
+import random
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def zad1():
+    a = ((math.e)**4 - math.log(34,2)) ** (1 / 3)
+    print(round(a,2))
+    b = (math.log(20) + math.cos(45) + math.e) ** (1 / 3)
+    print(round(b,2))
+    c = ((math.log(20,3)+  math.sin(45) * (5/8))) ** (1 / 4)
+    print(round(c,2))
+    d = math.log(23,3)+(math.sin(34)+5) ** (1 / 3)
+    print(round(d,2))
+    e = (math.log(32,2) + math.pi + math.sin(56)) ** (1 / 4)
+    print(round(e,2))
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def zad2():
+    a = 1;
+    n = int(input("podaj wysokosc wiezy: "))
+    if n < 0:
+        print("podano ujemna wartosc")
+    elif n > 10:
+        print("podano wartosc wieksza od 10")
+    else:
+        for i in range(1,n+1):
+            print("A"*i)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def zad3():
+    n = int(input("wpisz wysokosc piramidy: "))
+    if n > 10:
+        print("liczba wieksza od 10")
+    elif n < 0:
+        print("liczba ujemna")
+    else:
+        for i in range(1, n + 1):
+            print(" " * (n - i) + "A" * i + "A"*(i-1))
+
+
+def zad5():
+    n = int(input("wpisz ilosc wierszy: "))
+    matrix = []
+    for i in range(n):
+        wiersz = [random.randint(1,10) for i in range(n)]
+        matrix.append(wiersz)
+    suma_wierszy = [sum(wiersz) for wiersz in matrix]
+
+    print(f"{suma_wierszy} - suma poszczegolnych wierszy")
+    print(f"{matrix} - cala macierz")
+
+def main():
+    #zad1()
+    #zad2()
+    #zad3()
+    #zad5()
+
+
+
+main()
