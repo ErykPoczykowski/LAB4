@@ -49,11 +49,22 @@ def zad5():
     print(f"{suma_wierszy} - suma poszczegolnych wierszy")
     print(f"{matrix} - cala macierz")
 
+
+def zad6():
+    a = int(input("liczba do podniesienia: "))
+    b = int(input("liczba podnosząca: "))
+    print(a**b)
+    print(len(str(a**b)))
+    napis = str(a**b)
+    print(napis[-1])
+
+
 def main():
     #zad1()
     #zad2()
     #zad3()
     #zad5()
+    zad6()
 
 
 
